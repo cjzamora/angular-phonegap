@@ -257,7 +257,10 @@ gulp.task('watch', function() {
         COMPONENTS_PATH,
         DECORATOR_PATH,
         SERVICES_PATH,
-        APP_SCRIPTS_PATH
+        APP_SCRIPTS_PATH,
+        STYLES_BUILD_PATH,
+        SCRIPTS_BUILD_PATH,
+        APP_STYLES_PATH
     ], function() {
         // run this actions
         sequence('lint', 'build', 'inject-clean', 'inject');
@@ -272,7 +275,10 @@ gulp.task('watch-dev', function() {
         COMPONENTS_PATH,
         DECORATOR_PATH,
         SERVICES_PATH,
-        APP_SCRIPTS_PATH
+        APP_SCRIPTS_PATH,
+        STYLES_BUILD_PATH,
+        SCRIPTS_BUILD_PATH,
+        APP_STYLES_PATH
     ], function() {
         // run this actions
         sequence('lint', 'inject-clean', 'inject-dev');
