@@ -1,0 +1,21 @@
+{
+  "name": "angular-bootstrap-app",
+  "version": "0.0.0",
+  "authors": [
+    "cjzamora <charles.andacc@gmail.com>"
+  ],
+  "description": "Angular Bootstrap Application",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.4.1",
+    "angular-ui-router": "~0.2.15"
+  }
+}
