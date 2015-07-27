@@ -10,26 +10,20 @@ angular
 	$stateProvider
 	// root scope
 	.state('root', {
-		url 		: '',
-		abstract 	: true,
-		views 		: {
-			'header' : {
-				templateUrl : 'application/views/header.html'
-			},
-			'footer' : {
-				templateUrl : 'application/views/footer.html'
-			}
+		abstract : true,
+		views  	 : {
+			'header' 	: { templateUrl : 'application/views/header.html' },
+			'footer' 	: { templateUrl : 'application/views/footer.html' }
 		}
 	})
-	// index scope
-	.state('root.index', {
+	// home scope
+	.state('home', {
 		url 	: '/',
-		views 	: {
-			'@' : {
-				template : 'BODY'
-			}
+		parent 	: 'root',
+		views 	: { 
+			'main@' : { template 	: 'HOMEPAGE' }
 		}
-	});
+	})
 })
 // run block
 .run(runConfigRouter);

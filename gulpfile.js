@@ -66,6 +66,9 @@ var APP_STYLES_PATH     = __dirname + '/www/application/assets/styles/**/*.css';
 // injector target path
 var INJECT_TARGET_PATH  = __dirname + '/www/application/views/index.html';
 
+// ignored bower files
+var ignored = [];
+
 // application files
 var files = {
     // default application scripts
@@ -492,6 +495,11 @@ function replacePaths(paths, bowerPath, appVendorPath) {
 
     // iterate on each paths
     for(var i in paths) {
+        // if we need to ignore it
+        if(ignored.indexOf(paths[i]) !== -1) {
+            continue;
+        }
+
         newPaths[i] = paths[i]
         // replace bower components path
         .replace(bowerPath, appVendorPath);
